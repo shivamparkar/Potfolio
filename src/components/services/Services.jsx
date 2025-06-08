@@ -21,7 +21,6 @@ const variants = {
 
 const Services = () => {
   const ref = useRef();
-
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
@@ -29,84 +28,78 @@ const Services = () => {
       className="services"
       variants={variants}
       initial="initial"
-      // animate="animate"
-      // whileInView="animate"
+      animate="animate"
       ref={ref}
-      animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
-        <p>
+        {/* <p>
           I focus on helping your brand grow
           <br /> and move forward
-        </p>
+        </p> */}
         <hr />
       </motion.div>
+
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/people.webp" alt="" />
+          {/* <img src="/people.webp" alt="" /> */}
           <h1>
-            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
+            <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
+            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b> Business.
           </h1>
-          <button>WHAT WE DO?</button>
+          <motion.a href="#Portfolio" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <button>WHAT I DO?</button>
+          </motion.a>
+
         </div>
       </motion.div>
+
       <motion.div className="listContainer" variants={variants}>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Frontend Development</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            I build responsive and interactive UIs using React.js, SCSS, and Framer Motion. Focused on performance, UX, and clean code.
           </p>
-          <button>Go</button>
+
         </motion.div>
+
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Backend APIs</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            I create scalable and secure RESTful APIs using .NET Core, Entity Framework, SQL Server, and Node.js with strong authentication, validation, and error handling.
           </p>
-          <button>Go</button>
+
         </motion.div>
+
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Full Stack Apps</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            From frontend to backend, I build and integrate complete applications with login systems, admin dashboards, and database connectivity.
           </p>
-          <button>Go</button>
+
         </motion.div>
+
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Deployment & Tools</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            I use Git, GitHub, Postman, and deploy projects on platforms like Vercel and Azure to bring apps from dev to production.
           </p>
-          <button>Go</button>
+
         </motion.div>
       </motion.div>
     </motion.div>
