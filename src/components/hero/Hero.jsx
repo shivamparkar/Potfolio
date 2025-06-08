@@ -48,8 +48,8 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Shivam Parkar</motion.h2>
-          <motion.h1 variants={textVariants}>
+          <motion.h2 variants={textVariants} style={{ padding: "30px 20px 0 0" }}>Shivam Parkar</motion.h2>
+          <motion.h1 variants={textVariants} style={{padding:"0px 20px"}}>
           Full Stack Developer • React • .NET
           </motion.h1>
           {/* <motion.div variants={textVariants} className="buttons">
